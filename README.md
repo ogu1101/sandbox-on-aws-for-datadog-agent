@@ -14,7 +14,7 @@
 ## terraform/terraform.tfvars　ファイルの修正
 
 - `creator` にご自身の名前を設定してください。
-- こちらの[サイト](https://www.cman.jp/network/support/go_access.cgi)でグローバル IP アドレスを確認し、`your_global_ip_address` にグローバル IP アドレスを設定してください。
+- こちらの[サイト](https://www.cman.jp/network/support/go_access.cgi)でグローバル IP アドレスを確認し、`your_global_ip_address` に設定してください。
 - [事前に EC2 のキーペアを作成し](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/create-key-pairs.html)、`key_pair_name` にそのキーペア名を設定してください。
 - `dd_api_key` に Datadog の API キーを設定してください。
 
@@ -26,7 +26,12 @@
   - [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
   - [Authenticate with short-term credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-short-term.html)
 
-## コマンド実行
+# コマンド実行
 
 1. 初めての場合は、`terraform init` コマンドを実行してください。
 1. `terraform apply` コマンドを実行してください。
+
+# 動作確認
+
+- こちらの [AWS ドキュメント](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html)を参考に、Linux インスタンスに SSH で接続してください。
+- こちらの [AWS ドキュメント](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/connect-rdp.html)を参考に、Windows インスタンスに RDP で接続してください。
