@@ -20,5 +20,5 @@
 
 ## コマンド実行
 
-- 初めての場合は、`terraform init` コマンドを実行してください。
-- `terraform apply` コマンドを実行してください。
+1. 初めての場合は、`terraform init` コマンドを実行してください。
+1. `terraform apply` コマンドを実行してください。
