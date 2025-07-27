@@ -6,19 +6,14 @@ resource "aws_vpc" "main" {
 
 # Subnets
 
-resource "aws_subnet" "nat_gateway" {
+resource "aws_subnet" "linux" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.1.0/24"
 }
 
-resource "aws_subnet" "linux" {
-  vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.2.0/24"
-}
-
 resource "aws_subnet" "windows" {
   vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.3.0/24"
+  cidr_block = "10.0.2.0/24"
 }
 
 # Security Groups
@@ -63,7 +58,7 @@ resource "aws_vpc_security_group_egress_rule" "windows" {
   ip_protocol       = "-1" # semantically equivalent to all ports
 }
 
-# Gateways
+# Internet Gateway
 
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
