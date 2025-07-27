@@ -18,6 +18,14 @@
 - [事前に EC2 のキーペアを作成し](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/create-key-pairs.html)、`key_pair_name` にそのキーペア名を設定してください。
 - `dd_api_key` に Datadog の API キーを設定してください。
 
+## AWS 認証情報の設定
+
+- 以下ドキュメントのいずれかを参考に、AWS 認証情報を設定してください。
+  - [Configure the AWS CLI with IAM Identity Center authentication](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso)
+  - [Environment variables to configure the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html?icmpid=docs_sso_user_portal)
+  - [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
+  - [Authenticate with short-term credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-short-term.html)
+
 ## コマンド実行
 
 1. 初めての場合は、`terraform init` コマンドを実行してください。
