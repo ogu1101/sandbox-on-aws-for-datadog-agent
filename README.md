@@ -30,7 +30,7 @@
 
 このプロジェクトのルートディレクトリで以下のコマンドを実行してください。
 
-1. `terraform init` （初回の場合のみ）
+1. `terraform init` （初回のみ）
 1. `terraform apply`
 
 # 動作確認
