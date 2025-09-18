@@ -11,7 +11,7 @@
 
 # 事前準備
 
-## terraform/terraform.tfvars ファイルの修正
+## terraform.tfvars ファイルの修正
 
 - `creator` にご自身の名前を設定してください。
 - こちらの[サイト](https://www.cman.jp/network/support/go_access.cgi)でグローバル IP アドレスを確認し、`your_global_ip_address` に設定してください。
