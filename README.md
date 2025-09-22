@@ -15,7 +15,7 @@
 
 - `creator` にご自身の名前を設定してください。
 - こちらの[サイト](https://www.cman.jp/network/support/go_access.cgi)でグローバル IP アドレスを確認し、`your_global_ip_address` に設定してください。
-- [事前に EC2 のキーペアを作成し](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/create-key-pairs.html)、`key_pair_name` にそのキーペア名を設定してください。
+- 事前に [EC2 のキーペアを作成](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/create-key-pairs.html)し、`key_pair_name` にそのキーペア名を設定してください。
 - `dd_api_key` に Datadog の API キーを設定してください。
 
 ## AWS 認証情報の設定
