@@ -22,7 +22,7 @@
 - 事前に [EC2 のキーペアを作成](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/create-key-pairs.html)し、`key_pair_name` にそのキーペア名を設定してください。
 - `dd_api_key` に Datadog の API キーを設定してください。
 - `dd_app_key` に Datadog の Application キーを設定してください。
-- Datadog の従業員である場合は、こちらの[ドキュメント](https://datadoghq.atlassian.net/wiki/spaces/TS/pages/346557463/AWS+Educational+Datadog+Sandbox+Account)に従って、`dd_integration_role` を設定してください。
+- Datadog の従業員である場合は、こちらの[ドキュメント](https://datadoghq.atlassian.net/wiki/spaces/TS/pages/346557463/AWS+Educational+Datadog+Sandbox+Account#Integrating-the-Sandbox)に従って、`dd_integration_role` を設定してください。
 
 ## AWS 認証情報の設定
 
