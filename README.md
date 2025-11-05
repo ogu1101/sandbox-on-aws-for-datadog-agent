@@ -1,10 +1,10 @@
-# AWS + Datadog Terraform Demo
+# AWS + Datadog Terraform Setup
 
 ## Introduction
 
-This repository provides a Terraform configuration to automatically deploy both **Linux** and **Windows** EC2 instances on **AWS**, with **Datadog Agent** installation and **AWS–Datadog integration** handled automatically.
+This repository provides a Terraform configuration that automatically deploys both **Linux** and **Windows** EC2 instances on **AWS**, with the **Datadog Agent** installed and the **AWS–Datadog integration** configured automatically.
 
-The setup is ideal for demonstration, sandbox testing, or training environments where quick provisioning and Datadog integration are required.
+The setup is ideal for sandbox testing or training environments where quick provisioning and Datadog integration are required.
 
 ![architecture.png](architecture.png)
 
@@ -12,7 +12,7 @@ The setup is ideal for demonstration, sandbox testing, or training environments 
 
 ## Overview
 
-When you clone this repository and execute `terraform apply`, the following will happen automatically:
+When you clone this repository and run `terraform apply`, the following actions will occur automatically:
 
 1. AWS EC2 instances (Linux and Windows) will be launched.  
 2. Datadog Agents will be installed on each instance.  
@@ -22,7 +22,7 @@ When you clone this repository and execute `terraform apply`, the following will
 
 ## Prerequisites
 
-Ensure that the following tools are installed on your system before proceeding:
+Before you begin, ensure that the following tools are installed on your local environment:
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)  
 - [Terraform](https://developer.hashicorp.com/terraform/install)
@@ -35,18 +35,18 @@ Ensure that the following tools are installed on your system before proceeding:
 
 Edit the `terraform.tfvars` file and update the following values:
 
-- **`creator`** — Set your name.  
-- **`your_global_ip_address`** — Obtain your global IP from [this site](https://www.cman.jp/network/support/go_access.cgi).  
-- **`key_pair_name`** — [Create an EC2 key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) beforehand and specify its name here.  
-- **`dd_api_key`** — Your Datadog API key.  
-- **`dd_app_key`** — Your Datadog Application key.  
-- **`dd_integration_role`** — For Datadog employees, set dd_integration_role according to the naming convention described in [this guide](https://datadoghq.atlassian.net/wiki/spaces/TS/pages/346557463/AWS+Educational+Datadog+Sandbox+Account#Integrating-the-Sandbox).
+- **`creator`** — Enter your name.  
+- **`your_global_ip_address`** — Obtain your global IP address from [this site](https://www.cman.jp/network/support/go_access.cgi) and set it here.  
+- **`key_pair_name`** — [Create an EC2 key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) in advance and specify its name.  
+- **`dd_api_key`** — Enter your Datadog API key.  
+- **`dd_app_key`** — Enter your Datadog application key.  
+- **`dd_integration_role`** — For Datadog employees, set `dd_integration_role` according to the naming convention described in [this guide](https://datadoghq.atlassian.net/wiki/spaces/TS/pages/346557463/AWS+Educational+Datadog+Sandbox+Account#Integrating-the-Sandbox).
 
 ---
 
 ### 2. Configure AWS Credentials
 
-Set up AWS credentials using one of the following methods:
+Configure your AWS credentials using one of the following methods:
 
 - [Configure the AWS CLI with IAM Identity Center authentication](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso)  
 - [Use environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html?icmpid=docs_sso_user_portal)  
@@ -57,37 +57,37 @@ Set up AWS credentials using one of the following methods:
 
 ## Deployment
 
-Run the following commands in the project’s root directory:
+Run the following commands from the project’s root directory:
 
 ```bash
-terraform init    # Run only once, during initial setup
+terraform init    # Run once during initial setup
 terraform apply
 ```
 
-Terraform will then provision the AWS resources and automatically configure Datadog integrations.
+Terraform will provision the AWS resources and automatically configure the Datadog integrations.
 
 ---
 
 ## Verification
 
-Once the deployment completes:
+After the deployment completes:
 
-- Connect to the **Linux instance** via SSH following [this AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html).  
-- Connect to the **Windows instance** via RDP following [this AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-rdp.html).
+- Connect to the **Linux instance** via SSH using [this AWS guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html).  
+- Connect to the **Windows instance** via RDP using [this AWS guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-rdp.html).
 
-You should see the Datadog Agent running and metrics flowing into your Datadog dashboard shortly after deployment.
+You should see the Datadog Agent running and metrics appearing in your Datadog dashboard shortly after deployment.
 
 ---
 
 ## Notes
 
-- All resources are deployed under your AWS account; please ensure you have the necessary permissions and budget.  
-- Review the Terraform plan carefully before applying changes to avoid unintended costs or configurations.  
-- Datadog API and Application keys are sensitive credentials — **do not commit them to version control**.
+- All resources are deployed to your own AWS account. Ensure that you have sufficient permissions and budget before applying changes.  
+- Review the Terraform plan output carefully before proceeding to avoid unintended costs or configurations.  
+- Datadog API and application keys are sensitive credentials — **never commit them to version control**.
 
 ---
 
 ## Disclaimer
 
-This repository is intended for **educational and demonstration purposes only**.  
+This repository is intended for **educational and testing purposes only**.  
 Do not use it in production environments without reviewing and adapting the configuration for security, compliance, and cost-management requirements.
