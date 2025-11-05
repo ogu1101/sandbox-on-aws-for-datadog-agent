@@ -4,6 +4,10 @@
 
 それらの EC2 インスタンスには、自動で Datadog Agent がインストールされます。
 
+また、自動で Datadog の AWS インテグレーションがセットアップされます。
+
+![architecture.png](architecture.png)
+
 # 前提条件
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) をインストール済みであること。
@@ -17,6 +21,7 @@
 - こちらの[サイト](https://www.cman.jp/network/support/go_access.cgi)でグローバル IP アドレスを確認し、`your_global_ip_address` に設定してください。
 - 事前に [EC2 のキーペアを作成](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/create-key-pairs.html)し、`key_pair_name` にそのキーペア名を設定してください。
 - `dd_api_key` に Datadog の API キーを設定してください。
+- Datadog の従業員である場合は、こちらの[ドキュメント](https://datadoghq.atlassian.net/wiki/spaces/TS/pages/346557463/AWS+Educational+Datadog+Sandbox+Account)に従って、`dd_integration_role` を設定してください。
 
 ## AWS 認証情報の設定
 

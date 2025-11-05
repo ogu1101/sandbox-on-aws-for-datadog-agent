@@ -14,16 +14,8 @@ variable "global_ip_address" {
   description = "global ip address"
 }
 
-variable "linux_ami" {
-  description = "linux instance ami"
-}
-
 variable "linux_instance_type" {
   description = "linux instance type"
-}
-
-variable "windows_ami" {
-  description = "windows instance ami"
 }
 
 variable "windows_instance_type" {
@@ -36,4 +28,16 @@ variable "key_pair_name" {
 
 variable "dd_api_key" {
   description = "datadog api key"
+}
+
+variable "dd_app_key" {
+  description = "datadog app key"
+}
+
+variable "aws_account_id" {
+  description = "aws account id"
+}
+
+variable "dd_integration_role" {
+  description = "datadog integration role"
 }

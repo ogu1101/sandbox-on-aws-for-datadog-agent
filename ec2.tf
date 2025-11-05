@@ -1,5 +1,21 @@
+data "aws_ami" "linux" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["RHEL_HA-10.0.0_HVM-*-x86_64-0-Hourly2-GP3"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["309956199498"] # Canonical
+}
+
 resource "aws_instance" "linux" {
-  ami                    = var.linux_ami
+  ami                    = data.aws_ami.linux.id
   instance_type          = var.linux_instance_type
   key_name               = var.key_pair_name
   subnet_id              = aws_subnet.linux.id
@@ -23,8 +39,24 @@ resource "aws_instance" "linux" {
   EOF
 }
 
+data "aws_ami" "windows" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["Windows_Server-2025-English-Full-Base-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["801119661308"] # Canonical
+}
+
 resource "aws_instance" "windows" {
-  ami                    = var.windows_ami
+  ami                    = data.aws_ami.windows.id
   instance_type          = var.windows_instance_type
   key_name               = var.key_pair_name
   subnet_id              = aws_subnet.windows.id
