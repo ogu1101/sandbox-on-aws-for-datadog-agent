@@ -40,7 +40,7 @@ Edit the `terraform.tfvars` file and update the following values:
 - **`key_pair_name`** — [Create an EC2 key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) beforehand and specify its name here.  
 - **`dd_api_key`** — Your Datadog API key.  
 - **`dd_app_key`** — Your Datadog Application key.  
-- **`dd_integration_role`** — If you are a Datadog employee, follow [this guide](https://datadoghq.atlassian.net/wiki/spaces/TS/pages/346557463/AWS+Educational+Datadog+Sandbox+Account#Integrating-the-Sandbox) to configure the appropriate role.
+- **`dd_integration_role`** — For Datadog employees, set dd_integration_role according to the naming convention described in [this guide](https://datadoghq.atlassian.net/wiki/spaces/TS/pages/346557463/AWS+Educational+Datadog+Sandbox+Account#Integrating-the-Sandbox).
 
 ---
 
