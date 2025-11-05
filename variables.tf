@@ -31,7 +31,7 @@ variable "dd_api_key" {
 }
 
 variable "dd_app_key" {
-  description = "datadog app key"
+  description = "datadog application key"
 }
 
 variable "aws_account_id" {
