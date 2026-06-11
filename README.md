@@ -101,8 +101,8 @@ Terraform will provision all AWS resources and automatically configure the Datad
 
 After the deployment completes:
 
-- Linux — Connect via SSH: AWS guide (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html)
-- Windows — Connect via RDP: AWS guide (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-rdp.html)
+- Linux — [Connect via SSH: AWS guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html)
+- Windows — [Connect via RDP: AWS guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-rdp.html)
 
 The Datadog Agent should be running and metrics should appear in your Datadog dashboard shortly after deployment.
 
