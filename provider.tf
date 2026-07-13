@@ -18,8 +18,8 @@ provider "aws" {
   default_tags {
     tags = {
       name    = "created by ${var.creator}"
-      team    = var.team
-      creator = var.creator
+      ts_team    = var.team
+      ts_creator = var.creator
     }
   }
 }
