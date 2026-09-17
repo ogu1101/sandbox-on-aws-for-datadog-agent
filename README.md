@@ -68,7 +68,7 @@ Edit `terraform.tfvars` and fill in the following values:
 | `key_pair_name` | Name of a pre-created [EC2 key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html). |
 | `dd_api_key` | Your Datadog API key. |
 | `dd_app_key` | Your Datadog application key. |
-| `dd_integration_role` | *(Datadog employees only)* Set according to the naming convention in [this internal guide](https://datadoghq.atlassian.net/wiki/spaces/TS/pages/346557463/AWS+Educational+Datadog+Sandbox+Account#Integrating-the-Sandbox). |
+| `dd_integration_role` | *(Datadog employees only)* Set according to the naming convention in [this internal guide](https://datadoghq.atlassian.net/wiki/spaces/TS/pages/346557463/AWS+Educational+Datadog+Sandbox+Account). |
 
 > **Security:** `dd_api_key` and `dd_app_key` are sensitive credentials. **Never commit them to version control.**
 
