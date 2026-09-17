@@ -1,6 +1,6 @@
 region                = "ap-northeast-1"
 team                  = "technical-support-engineering"
-creator               = "shuhei.ogura"
+creator               = "shuhei.ogura@datadoghq.com"
 global_ip_address     = "219.167.10.232/32"
 linux_instance_type   = "t3.large"
 windows_instance_type = "t3.large"
