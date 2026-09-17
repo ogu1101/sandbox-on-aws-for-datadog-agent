@@ -1,5 +1,5 @@
 region                = "ap-northeast-1"
-team                  = "technical-support-engineering"
+team                  = "tse"
 creator               = "shuhei.ogura@datadoghq.com"
 global_ip_address     = "219.167.10.232/32"
 linux_instance_type   = "t3.large"
