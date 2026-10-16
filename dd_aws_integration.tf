@@ -57,11 +57,11 @@ data "aws_iam_policy_document" "datadog_aws_integration" {
 resource "aws_iam_policy" "datadog_aws_integration" {
   count = length(local.permission_chunks)
 
-  name   = "DatadogAWSIntegrationPolicy-${count.index + 1}"
+  name   = "DatadogAWSIntegrationPolicy-${var.identifier}-${count.index + 1}"
   policy = data.aws_iam_policy_document.datadog_aws_integration[count.index].json
 }
 resource "aws_iam_role" "datadog_aws_integration" {
-  name               = var.dd_integration_role
+  name               = "datadog-aws-integration-role-${var.identifier}"
   description        = "Role for Datadog AWS Integration"
   assume_role_policy = data.aws_iam_policy_document.datadog_aws_integration_assume_role.json
 }
@@ -85,7 +85,7 @@ resource "datadog_integration_aws_account" "datadog_integration" {
   }
   auth_config {
     aws_auth_config_role {
-      role_name = var.dd_integration_role
+      role_name = "datadog-aws-integration-role-${var.identifier}"
     }
   }
   resources_config {

@@ -38,6 +38,6 @@ variable "aws_account_id" {
   description = "aws account id"
 }
 
-variable "dd_integration_role" {
-  description = "datadog integration role"
+variable "identifier" {
+  description = "identifier"
 }
