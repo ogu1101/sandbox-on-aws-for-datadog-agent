@@ -37,7 +37,3 @@ variable "dd_app_key" {
 variable "aws_account_id" {
   description = "aws account id"
 }
-
-variable "identifier" {
-  description = "identifier"
-}
